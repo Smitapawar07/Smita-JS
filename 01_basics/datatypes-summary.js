@@ -10,30 +10,64 @@
 
 
 
-const score = 100
-const scoreValue = 100.3
-const isLoggedIn = false
-const outsideTemp = null
-let userEmail;
-const id= Symbol('123')
-const anotherId = Symbol('123')
-//so we will get the op false because we know that symbol creates the unique id
-console.log(id === anotherId);
+// const score = 100
+// const scoreValue = 100.3
+// const isLoggedIn = false
+// const outsideTemp = null
+// let userEmail;
+// const id= Symbol('123')
+// const anotherId = Symbol('123')
+
+// //so we will get the op false because we know that symbol creates the unique id
+// console.log(id === anotherId);
 
 
 
 // Non -primitive :reference will gives us
 // 3 types :array,objects , functions 
-const heros =["srk","sdk","dcc"]//curly brackets me objects
-let myObj = {
-    name:"smita",
-    age : 33,
-}
 
-//function we treat it as a var
-const myFunction =function{
-    console.log("hii")
-}
+// const heros =["srk","sdk","dcc"]//curly brackets me objects
+// let myObj = {
+//     name:"smita",
+//     age : 33,
+// }
+
+// //function we treat it as a var
+
+// const myFunction =function
+// {
+//     console.log("hii")
+// }
 
 //datatype of fun is fiunction object
 // non pri data type is object
+
+
+//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+//Stack memory(primitive) and Heap memory(non-pri)
+
+let myStudy = "JS"
+let anotherName = myStudy
+anotherName = "advJS"
+console.log(myStudy);
+console.log(anotherName);
+
+
+let userOne = {
+    email : "user@google.com",
+    upi : "user@ybl"
+}
+    let userTwo = userOne
+    userTwo.email = "hitesh@google.com"
+    console. log (userOne.email) ;
+    console. log (userTwo.email) ;
+
+    //when we work with stack then it give us the copy of the value
+    
+    //when we work with heap then it give us the reference of the value
+
+
+
+
+    
