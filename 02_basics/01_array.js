@@ -15,4 +15,26 @@
 
 //array
 const myArr = [0,1,2,3,4]
-console.log(myArr[0]);
+// const myHeros = ["sd","ds"]
+// const myArr2 = new Array(1,2,3,4)
+// console.log(myArr[1]);
+
+// //array methods
+
+// myArr.push(9)
+// console.log(myArr);
+// myArr.pop()//remove last ele
+// console.log(myArr);
+
+//myArr.unshift(3)//it will add ele at 1st
+// console.log(myArr);
+// myArr.shift()
+// console.log(myArr);//it will remove the starting ele
+
+
+
+console.log(myArr.includes(4));//it will come boolean
+
+console.log(myArr.indexOf(7));//it will 
+
+const newArr = myArr.join//adds all the of arr into astring
