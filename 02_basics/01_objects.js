@@ -48,3 +48,10 @@ JsUser.greeting = function(){
 }
 console.log((JsUser.greeting));
 console.log((JsUser.greeting()));
+
+
+
+
+
+
+//-------------------------------
