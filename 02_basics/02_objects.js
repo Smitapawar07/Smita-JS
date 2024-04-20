@@ -5,7 +5,7 @@
  tinderUser.id="3223"
  tinderUser.name ="sddc"
  tinderUser.isLoggedIn = false
- console.log(tinderUser);//op is {}
+// console.log(tinderUser);//op is {}
 
 //we can give objects as a nested one
 
@@ -33,7 +33,7 @@ const obj3 ={5:"g",6:"l"}
 // we will use this spread method for doing this
 //{ '1': 'a', '2': 'd', '3': 'k', '4': 'n', '5': 'g', '6': 'l' }
 const obj4 = {...obj1,...obj2,...obj3}
-console.log(obj4);
+//console.log(obj4);
 
 
 const users = [
@@ -50,8 +50,49 @@ const users = [
 
 
 users[1].email
-console.log(tinderUser);
-console.log(Object.keys(tinderUser));
-console.log(Object.values(tinderUser));
-console.log(Object.entries(tinderUser));
-console.log(tinderUser.hasOwnProperty('name'));
+// console.log(tinderUser);
+// console.log(Object.keys(tinderUser));
+// console.log(Object.values(tinderUser));
+// console.log(Object.entries(tinderUser));
+// console.log(tinderUser.hasOwnProperty('name'));
+
+
+//part 3
+
+const cousre={
+    coursename:"js",
+    price:"67",
+    courseinstructor : "youtube"
+}
+//cousre.courseinstructor //or we can do asa bhi
+const{courseinstructor :teacher}=cousre
+//console.log(courseinstructor);
+//we can change the name as like this this is called obj destructing
+console.log(teacher);
+//we can get this accessing
+
+//API
+
+//we got some values from backend and how write it before it comes in xml format but its so complicated so now it comes in JSON format
+
+// {
+//     name:"c",
+//     csname:"cwe",
+//     price:"cws"// here we got the err so 
+//     //this is known json
+// }
+
+// {
+//     "name":"c",
+//     "csname":"cwe",
+//     "price":"cws" 
+//     //this is known json in json keys also is a string
+// }
+
+//also we can get the api as in array format
+//js object notation 
+[
+    {
+
+    }
+]
