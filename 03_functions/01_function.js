@@ -62,7 +62,7 @@ console.log(loginUser());
 
 
 
-
+//when we pass the value in parameter
 
 function loginUser2(username2="fam ") {
   if(!username2)    {
