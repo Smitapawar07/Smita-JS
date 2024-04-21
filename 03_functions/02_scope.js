@@ -52,10 +52,29 @@ if(true)
 {
 let a4 =20
 const b4 = 30
-console.log("INNER a4:" , a4);
+//console.log("INNER a4:" , a4);
 }
-console.log("OUTTER a4:",a4);
+//console.log("OUTTER a4:",a4);
 //console.log(b3);
 
 
 //op of above code is INNER a4: 20   OUTTER a4: 67
+
+
+
+
+function one()
+{
+    const username="smita"
+    function two(){
+        const website="drtf"
+        console.log(username);
+    }
+    //console.log(website);
+    two()
+}
+one()
+
+
+//okay here is the concept where we can say that elder can not take the ice cream from the youngers but in vice versa youngers can take the ice cream from the elders
+//here we defined the one function n 2nd one inside the 1st function so the inner fun can have the outer functionalities but outer cant have the inner functionalities thats the point of scope
