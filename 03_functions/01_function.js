@@ -50,7 +50,25 @@ const result2 =addTwoNum(3,88)
 
 
 function loginUser(username) {
+  if(!username)  //username === undefined it is old way by using ! we can get same op
+  {
+    console.log("plz enter a username");
+    return
+  }
     return `${username}just logged in`
     
 }
-console.log(loginUser(""));
+console.log(loginUser());
+
+
+
+
+
+function loginUser2(username2="fam ") {
+  if(!username2)    {
+    console.log("plz enter a username");
+    return
+  }
+    return `${username2}just logged in`
+}
+console.log(loginUser2()); //and if we pass the argumnet value here then it will override it 
