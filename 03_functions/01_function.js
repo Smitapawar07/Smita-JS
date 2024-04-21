@@ -52,7 +52,7 @@ const result2 =addTwoNum(3,88)
 function loginUser(username) {
   if(!username)  //username === undefined it is old way by using ! we can get same op
   {
-    console.log("plz enter a username");
+    //console.log("plz enter a username");
     return
   }
     return `${username}just logged in`
@@ -66,9 +66,51 @@ function loginUser(username) {
 
 function loginUser2(username2="fam ") {
   if(!username2)    {
-    console.log("plz enter a username");
+  //  console.log("plz enter a username");
     return
   }
     return `${username2}just logged in`
 }
-console.log(loginUser2()); //and if we pass the argumnet value here then it will override it 
+//console.log(loginUser2()); //and if we pass the argumnet value here then it will override it 
+
+
+
+//
+
+function calculateCartPrice(...n1){
+return n1
+}
+//console.log(calculateCartPrice(200,90,2223));//if want to all three but we cant do like this so for this we can use rest operator
+
+//rest and spread operator as per thier use
+
+
+function calculateCartPrice2(val1,val2,...num1){
+  return num1
+}
+//console.log(calculateCartPrice2(200 ,323,32,222223))//here only print is 32 222223 cause 1st two values are store in the val1 n val2
+
+
+
+
+const user={
+  username1:"dc",
+  price:2333
+}
+function handleObj(anyobj) {
+console.log(`username is ${anyobj.username1} and ${anyobj.price} is price`);  
+}
+//handleObj(user)//we can pass obj here also it will override now
+handleObj({
+  username1:"gvbh",
+  price:678
+})//op username is gvbh and 678 is price
+
+
+
+const myNewArr=[23,23,12,123,23]
+function return2ndval(getArr){
+  return getArr[3]
+}
+//console.log(return2ndval(myNewArr));
+console.log(return2ndval([23,23,56,5678,56]));
