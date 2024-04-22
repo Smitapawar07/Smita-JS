@@ -83,9 +83,23 @@ one()
 //+++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 
-
+console.log(addone(5));
 function addone(num){
     return num +1
 }
-addone(5) 
-const add
+
+
+
+//var are more powerful cause they can hold anything and this below way is called also the expression 
+
+//console.log(addtwo(5));//: Cannot access 'addtwo' before initialization
+const addtwo=function(num){
+    return num +2
+}
+console.log(addtwo(5));
+
+
+
+
+//okay so here is the concept that how we can decalre the function for ex if we write the addone(5) before function decalring it will give the op but with the expression it is not possible
+//so here comes the concept of hosting 
