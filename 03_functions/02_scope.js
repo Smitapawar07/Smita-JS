@@ -68,7 +68,7 @@ function one()
     const username="smita"
     function two(){
         const website="drtf"
-        console.log(username);
+        //console.log(username);
     }
     //console.log(website);
     two()
@@ -78,3 +78,14 @@ one()
 
 //okay here is the concept where we can say that elder can not take the ice cream from the youngers but in vice versa youngers can take the ice cream from the elders
 //here we defined the one function n 2nd one inside the 1st function so the inner fun can have the outer functionalities but outer cant have the inner functionalities thats the point of scope
+
+
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+
+function addone(num){
+    return num +1
+}
+addone(5) 
+const add
