@@ -1,1 +1,76 @@
 
+JS execution context
+--------
+run in two phase
+global EC(this)
+-in the browser the this obj return window obj
+-it will run in a thread cause js is single threded
+-1] global execution context
+-2] function execution context
+-3] Eval execution context -it is global obj itself  
+
+our code is run in two phase so 1st is
+1] Memory/Creation phase -only memory allocation
+2] execution phase - all the opr will perform here
+
+ex.
+1 let val1= 10
+2 let val2 =5
+3 function addNum(num1, num2){
+4 let total = numl +num2
+5 return total
+6 }
+7 let result1 = addNum(val1, val2)
+8 let result2 = addNumC(10, 2)
+
+
+lets see how it will execute
+
+step 1 : it will come global exeution it will get allocated to this keyword
+
+step 2 : memory phase -all var get collected it will allocate the value like this
+val1=undefined
+val2= undefined
+addNum = fun definition all{}
+result1 = undefined
+result2 = undefined
+
+this 1st cycle will get completed
+
+step 3 : Execution phase
+val1 =10
+val2 =5
+addNum //it will not run  now it will create its own execution context whenever the fun will get created again thread will be created
+however we meet the fun the memory phase and execution phase will be get executed and global phase remains the same as before 
+
+-----------here we will return the total
+total =15
+
+---
+memmory 
+val1 =undefined
+val2 = undefined
+total = undeined
+
+execution 
+num1 =10
+num2 =5
+total =15-------------it will return in global EC
+
+
+
+after the execution of function it will return the value to the global phase
+here for the line num 8 there is again function call so all the above steps will be get repeted only values get changed
+
+
+
+----------------------------------------------------------------------------
+
+call stack : it looks like stack
+
+global exe is compulsory
+
+
+
+
+
