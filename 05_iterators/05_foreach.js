@@ -96,13 +96,18 @@ const books=[
     {
         title:'b5', genre:"non-funny", publish:1927,edition:2004},
     {
-        title:'b6', genre:"history", publish:1889,edition:2003},
+        title:'b6', genre:"history", publish:1999,edition:2003},
     {
         title:'b7', genre:"funny", publish:1980,edition:2601}
 
 ];
-const userbooks=books.filter( (bk)=> bk.genre==='funny')
+const userbook=books.filter( (bk)=> bk.genre==='funny')
 
 const userbook1=books.filter( (bk)=>{ return bk.publish>=1880})// so here i declare the scope for that i need to give the return keyword otherwise i will get err
-console.log(userbooks);
-console.log(userbook1);
+const userbook3=books.filter( (bk)=> {
+    return bk.publish >=1995 && bk.genre ==="history"
+})
+
+// console.log(userbook);
+// console.log(userbook1);
+console.log(userbook3);
