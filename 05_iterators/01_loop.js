@@ -132,4 +132,32 @@ outer loop : 10
 
 
 
+// let myArr=['ab','bc','ed']
+// console.log(myArr.length);
+// for (let index = 0; index < myArr.length; index++) {
+//     const element = myArr[index];
+//     console.log(element);
+// }
 
+
+// break and continue
+//it will jump out the for loop
+
+// for (let i = 1; i <= 20; i++) {
+//     if(i==5){
+//         console.log("detected 5");
+//         break
+//     }
+//     console.log(`values of i ${i}`);
+    
+// }
+
+
+for (let i = 1; i <= 20; i++) {
+    if(i==5){
+        console.log("detected 5");
+        continue
+    }
+    console.log(`values of i ${i}`);
+    
+}
