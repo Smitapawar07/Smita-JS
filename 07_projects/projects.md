@@ -57,3 +57,25 @@ form.addEventListener('submit', function (e) {
 });
 
 ```
+
+
+# project 
+## time changing clock
+
+```javascript
+
+
+
+document.getElementById('clock');
+//both will display the same we will use one and comment one
+//document.querySelector('#clock')
+
+//here we can use the method setinterval
+
+setInterval(function () {
+  let date = new Date();
+  //console.log(date.toLocaleTimeString());
+  clock.innerHTML = date.toLocaleTimeString();
+}, 1000);
+
+```
