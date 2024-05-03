@@ -81,4 +81,48 @@ setInterval(function () {
 ```
 
 # project 
-## 
+## guess the num
+```javascript
+
+//for now incomplete code 
+const randomnum = console.log(parseInt(Math.random() * 100 + 1));
+
+const submit = document.querySelector('#subt');
+const userinput = document.querySelector('#guessField');
+const guessslot = document.querySelector('.guesses');
+const remaining = document.querySelector('.lastResult');
+const lowOrHi = document.querySelector('.lowOrHi');
+const startover = document.querySelector('.resultParas');
+
+const p = document.createElement('p');
+let prevguess = [];
+let numguess = 1;
+let playgame = true;
+//check you are available or not
+if (playgame) {
+  submit.addEventListener('click', function (e) {
+    e.preventDefault();
+  });
+}
+//const validate =
+function validateguess(guess) {
+  //
+}
+function checkguess(guess) {
+  //
+}
+function displayguess(guess) {
+  //
+}
+function displaymsg(msg) {
+  //
+}
+function endgame() {
+  //
+}
+function newgame() {
+  //
+}
+
+
+```
