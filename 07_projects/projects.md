@@ -84,8 +84,8 @@ setInterval(function () {
 ## guess the num
 ```javascript
 
-//for now incomplete code 
-const randomnum = console.log(parseInt(Math.random() * 100 + 1));
+//
+let randomnum = console.log(parseInt(Math.random() * 100 + 1));
 
 const submit = document.querySelector('#subt');
 const userinput = document.querySelector('#guessField');
@@ -102,26 +102,76 @@ let playgame = true;
 if (playgame) {
   submit.addEventListener('click', function (e) {
     e.preventDefault();
+    const guess = parseInt(userinput.value);
+    validateguess(guess);
   });
 }
 //const validate =
 function validateguess(guess) {
-  //
+  //for valid email and all
+  if (isNaN(guess)) {
+    alert('please enter the valid num');
+  } else if (guess < 1) {
+    alert('please enter the num');
+  } else if (guess > 100) {
+    alert('please enter the num less than 100');
+  } else {
+    prevguess.push(guess);
+    if (numguess === 11) {
+      displayguess(guess);
+      displaymsg(`Game over and random num was ${randomnum}`);
+      endgame();
+    } else {
+      displayguess(guess);
+      checkguess(guess);
+    }
+  }
 }
 function checkguess(guess) {
   //
+  if (guess === randomnum) {
+    displaymsg('you guess it right');
+    endgame();
+  } else if (guess < randomnum) {
+    displaymsg('no is too low');
+  } else if (guess > randomnum) {
+    displaymsg('no is to high');
+  }
 }
 function displayguess(guess) {
   //
+  userinput.value = '';
+  guessslot.innerHTML += `${guess} `;
+  numguess++;
+  remaining.innerHTML = `${11 - numguess} `;
 }
 function displaymsg(msg) {
   //
+  lowOrHi.innerHTML = `<h2>${msg}</h2>`;
 }
 function endgame() {
   //
+  userinput.value = '';
+  userinput.setAttribute('disabled', '');
+  p.classList.add('button');
+  p.innerHTML = `<h2 id="newgame">start new game</h2>`;
+  startover.appendChild(p);
+  playgame = false;
+  newgame();
 }
 function newgame() {
   //
+  const newgamebutton = document.querySelector('#newgame');
+  newgamebutton.addEventListener('click', function (e) {
+    randomnum = parseInt(Math.random() * 100 + 1);
+    prevguess = [];
+    numguess = 1;
+    guessslot.innerHTML = '';
+    remaining.innerHTML = `${11 - numguess} `;
+    userinput.removeAttribute('disabled');
+    startover.removeChild(p);
+    playgame = true;
+  });
 }
 
 
