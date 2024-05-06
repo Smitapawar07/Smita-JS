@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>html events</title>
+</head>
+<body style="background-color: darkslategray;color: lightslategray;">
+    <h2>amazing image</h2>
+    <div>
+        <ul id="images">
+            <li><img width="150px" id="photoshop" src="here.jpg" alt="photoshop"></li>
+            <li><img width="150px" id="japan" src="here.jpg" alt=""></li>
+            <li><img width="150px" id="river" src="here.jpg" alt=""></li>
+            <li><img width="150px" id="owl" src="here.jpg" alt=""></li>
+            <li><a style="color:aliceblue" href ="https://www.google.com/" id = "google">Google</a></li>
+           <!-- here we can easily give an onclick button in the html tag and we can work on it but its not good way to code beacause if project scale is high then its hard to manage ====>onclick="alert("owl")" -->
+        </ul>
+    </div>
+    <script>
+    //     // document.getElementById('owl').onclick = function(){
+    //     //     alert("hi i am smita")
+    //     // }
+    //     //here the another way but it provide the less feature thats why we used another 
+    //     //so here  event listener comes in the picture .
+    //      //here another approach attachEvent()
+    //     //jQuery - on 
+
+    //      //type, timestamp , defaultPrevented
+    //     //target , toElement , srcElement, currentTarget,
+    //     //clientX , clientY , screenX , screenY
+    //     //altkey , ctrlkey , shiftkey , keycode
+       
+    //     document.getElementById('images').addEventListener('click', function(e){
+    //         console.log("clicked by the ul");
+         
+    //     },false)
+    //     document.getElementById('owl').addEventListener('click', function(e){
+    //         console.log("clicked by owl ");
+    //         e.stopPropagation()//it will stop propogation
+    //     },false)
+        
+    //    /*so here which activity will click 1st that we are going to show 
+    //    when i click on owl then then click inside
+    //    this is known as the bubbling up niche se upar inner html--li -- ul */
+    // document.getElementById('google').addEventListener('click',function(e){
+    //     e.preventDefault()
+    //     console.log("google clicked");
+       
+    // },false)
+
+document.querySelector('#images').addEventListener('click', function(e){
+console.log(e.target.tagName);
+if(e.target.tagName ==='IMG'){
+    console.log("e.target.id");
+let removeit = e.target.parentNode
+removeit.remove()
+}
+//removeit.parentNode.removeChild(removeit)
+})
+
+    </script>
+</body>
+</html>
