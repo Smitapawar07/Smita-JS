@@ -104,3 +104,12 @@ return response.json()
 
 })
 .catch((error) => {console.log(error);})
+
+
+//lets see how fetch will work -> fetch API come to node.js in 2022 
+//1st api comes thr XML after that fetch api come so we can write it without xml 
+//so the pb is api works with browser and in node.js there is no browser 
+//abortcontroller 
+//before the fetch api there will be the request module which control  
+
+// the global fetch method starts the process of fetching a resources from the network returning a promise which is fullfilled once the responce is available
